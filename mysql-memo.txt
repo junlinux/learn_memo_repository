@@ -1,0 +1,114 @@
+関東である時点での出てきた芸能人を出す
+１．時間を設定しないとき：
+select * from programinfo inner join programdetail on 
+( programinfo.area = programdetail.area and programinfo.programid = programdetail.programid 
+and programinfo.start >= '2018-05-21 00:00:00' and programinfo.end <= '2018-05-21 23:59:59') 
+where length(cast)!= 0;
+
+ランキングのやり方
+：テレビで顔を出す時間順（出演者の数を考慮）
+
+：ユーザーに見られる時間
+ 
+ joinの確認
+ 
+ * 表programinfoのkantouの一日のデータをダンプする
+ mysqldump -h127.0.0.1 -pmL8yJeQw# -uchrankinguser -P13306 --no-create-info
+ --where="start >= '2018-05-01 00:00:00' and end <= '2018-05-31 23:59:59' and area='kantou'" 
+ chrankingdb programinfo> C:\\Users\\s139460\\整理\\01出演者ランキング\\dump_programinfo_kantou_201805.sql
+
+ * 表programdetailのkanntouの対応
+  mysqldump -h127.0.0.1 -pmL8yJeQw# -uchrankinguser -P13306 --no-create-info
+ --where="registdate between '2015-05-01 00:00:00' and  '2015-07-21 23:59:59' and area='kantou'" 
+ chrankingdb programdetail> dump_programdetail_kantou_20150521.sql
+ 
+ * 表rankingdataデータのダウンロード
+ mysqldump -h127.0.0.1 -pmL8yJeQw# -uchrankinguser -P13306 --no-create-info
+ --where="statisticsdate between '2018-04-01 00:00:00' and  '2018-04-30 23:59:59' and area='kantou'" 
+ chrankingdb rankingdata> dump_rankingdata_kantou_201804.sql
+ 
+関東で一日の放送した番組の芸能人ランキングを出す
+
+
+* programidが複数存在している可能性がある
+select name,count(programid) 
+from (select distinct name,programid from test_table) as tem_table group by name;
+
+
+NHK　特別処理
+
+すべてのものをプログラムで完成する
+
+
+一ヶ月の出演本数ランキング：
+select talent_name,count(talent_info.programid) as count, group_concat(title SEPARATOR ",")　from 
+talent_info inner join programinfo on 
+talent_info.programid = programinfo.programid and
+talent_info.area = programinfo.area and talent_info.area = "kantou"
+group by 
+talent_name order by count desc;
+
+一ヶ月の視聴者数ランキング
+select talent_name,avg(viewership) as avg,group_concat(title SEPARATOR ",") from talent_info inner join rankingdata on 
+(talent_info.programid=rankingdata.programid and
+talent_info.area = rankingdata.area )
+inner join programinfo on (talent_info.programid=programinfo.programid and 
+talent_info.area = programinfo.area)
+group by talent_name order by avg desc;
+
+同じ番組では一つにする、後ろに括弧をつけて、中に回数を入れる
+
+一ヶ月の視聴者数ランキングのやり方（地域別にする）
+この一ヶ月の番組にすべての出演者を出す、出演programid,地域
+rankingdataから視聴者数をもたらす
+programinfoから番組タイトルをもたらす
+
+有意義なのは視聴者の数を使うこと
+
+
+PPT先に完成していく：
+１．期間の決まり（ディリー、一週間、一ヶ月）
+出演本数ランキング
+１．一ヶ月、一年間問題がない、昨日では意味がない
+視聴者数ランキング
+１．視聴数に依頼する（真実に反映するため）
+	１）参加する人数を平均する
+	２）番組の長さ
+	３）ディリーと週間だけを提供する
+	４）月間はキャンペーンのように
+
+２．お金稼ぎのことは
+	１）自社製品広告のバナーを提供する
+	
+３．アプリの利用頻度を把握したい
+	１）毎日の利用数
+
+４．視聴者自分が好きなタレントがあれば、応援できる
+	１）支持ボダンを押したら、「ありがとう」を返す
+	１）一人支持されたら、星をつける、１０人支持されたら、月に変える、１００人支持されたら、太陽に変える
+
+昨日よく見かけられる芸能人ランキング（納得、納得できない）
+
+なぜ、週間は多分変わらない、視聴ランキングと同じになる
+
+視聴者数のデータを利用することで、タレントの影響力がわかる
+
+
+ビジネスモデル
+ユーザー数を増やす
+広告バナーをランキングの中に差し入れる
+新しいサービスが提供できる（例えば、調査パネル）
+
+すべてプログラムで完成する
+１，処理が便利である
+２、視聴者数を使ってランキングして結果を見る
+
+https://ngtv.aquos.jp/recranking?area=nagano&type=playback
+
+https://notification.aquos.jp/chranking/ranking
+
+テーブルのパーティションを確認するSQLです
+SELECT TABLE_SCHEMA, TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, TABLE_ROWS
+FROM INFORMATION_SCHEMA.PARTITIONS
+WHERE TABLE_NAME = 'rankingdata';
+
