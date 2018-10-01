@@ -1,0 +1,24 @@
+仕事メモ
+
+vdreader
+kCw3pk9a#
+
+2018/10/01
+1.データのdownload
+2.不明なところ、聞き続ける
+
+Mr. Roth, I really appreciate your help.
+I'm sorry for replying to you so late.
+But when I used the FastTest library test, 
+it got a same value in P@1 and R@1 (as default),
+as shown in the picture below.
+
+I also tried to test the date classified as two classes, 
+but P@1 always equal to R@1.
+When I calcuated the value of P@2 and R@2,
+I got P@2=50% and R@2=100%, 
+but I thank it shoud be P@2=100% and R@2=100%.
+
+So I really want to know the formula on P@1, P@2 and P@3.
+
+Thanks very much for your help

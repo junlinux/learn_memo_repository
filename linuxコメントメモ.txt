@@ -1,2 +1,39 @@
 １．diskの容量表示
 df -h (disk 容量)
+
+２．screen を強制attach
+screen -d -r [name]
+
+接続台数の計算方法
+
+わかりませんが、
+なんとなく、ネットワーク防犯カメラの位置情報を売り出したら、社会問題になりますね！
+
+３．cygwin コマンド インストール
+	１．downloadフォルダーの下に「setup-x86.exe」をクリックして、
+	ステップの中に必要な「package」を選択して、インストールします
+	
+	
+４．sudo apt-get install []がエラー出てきた時に /etc/resolv.confのnameserverを確認する
+
+５．gitのサーバー側のリポジトリの作成：
+	git init --bare --shared
+　　gitクライエント側からpush
+	git init
+	git commit --allow-empty -m 'first commit'
+	git remote add origin ssh://[USER]@[IPAdress]/var/git/...
+	git push
+	
+６．[RAMID表示手順]
+①ターミナル上でリターンキーを押すと以下のプロンプトがでます
+#
+②以下の様に入力、リターンするとデバッグコマンドが使えるようになります
+#dbgmon
+ ③デバッグコマンドのプロンプトは以下の様になります。
+dbgpro>
+ ④以下の様にデバッグコマンドを入力してください
+dbgpro> host dum ramid
+ ⑤以下の様にRAMIDが表示されます。
+DUM: RAMID is [FFFFFFFF-EEEEEEEE-20180906-210158BB]
+
+ログが流れて入力が分断されるかとは思いますが、分断は無視して入力してください。
