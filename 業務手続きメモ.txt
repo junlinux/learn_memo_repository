@@ -2,3 +2,38 @@
 １．年休の申請（半日年休）
 	イントラネットー>「勤怠システム・従業員必携」ー＞「届け申請」ー＞「休暇・欠勤申請」ー＞「半日年休（午前）」
 	理由なしでいいです
+	
+2. 出張の場合は
+	１）精算申請
+	２）勤怠システムの申請
+
+３．残業申請
+	１）勤怠システムの「届け申請」ー＞「時間外申請」
+	
+2.データの利用：
+	backupしたデータの利用：
+	CloudBerry Explorer for Amazon S3左上の「File」→「New S3 Compatible Accout」→「S3 Compatible」を選択
+	Service point：10.214.67.95:7480
+	AccessKey：DYIYXY6JKE9WG52QU92J
+	Secretkey：iDnBHNTnsmsWAZn4EOFVIHWIq1X8W8SsyrOCRCMA
+	Use SSLのチェックをOFF
+	にして接続できるはず
+	接続後の場所は chs-viewdata/chs_viewrange_data/dump/201810/
+	
+5.ユーザーとパスワード
+	グゥテレ：
+		user:test027
+		password:14964649
+		
+	タブロー：
+		user:cloud-bdd
+		password:12345678
+		
+	backlog:
+		user:zhou.jun@sharp.co.jp
+		password:jungogo1990
+		
+	ガラポン：
+		user:smartcloud2
+		password:0432998226
+		

@@ -3,3 +3,9 @@ python 学習メモ
 自分のモジュールを作りましょう
 １．strip
 2.
+
+1.input a python file
+	from [file_name/path] import *
+	import [file_name/path] as [name]
+	
+	部署
