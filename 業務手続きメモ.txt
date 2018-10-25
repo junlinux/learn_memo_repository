@@ -52,3 +52,15 @@
 		
 	イントラ：
 		二回目：sjungogo1990
+		
+6.　自分のパソコン資産を見る方法
+	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
+	詳しい資産情報の確認は以下のページに載せるエクセルを確認する。
+	http://ws.gs.sharp-global.com/sites/GL067-1001/Lists/Custom%20List/guide.aspx
+
+	
+7. サーバーの初期パスワード：
+	sharpsharp	
+	
+8. 業績評価シートの置き場：
+	https://secure.sharp.co.jp/jnjjoho/jinjihp/shinjinji/hyoka.htm
