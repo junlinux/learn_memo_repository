@@ -112,3 +112,7 @@ SELECT TABLE_SCHEMA, TABLE_NAME, PARTITION_NAME, PARTITION_ORDINAL_POSITION, TAB
 FROM INFORMATION_SCHEMA.PARTITIONS
 WHERE TABLE_NAME = 'rankingdata';
 
+１．データをダウンロードする方法：
+	mysql -h[ip] -P[port] -u[user] -p [dbname] -e "sql" > save_file
+	
+2.サーバーからデータをダウンロードするときに、メモリを考慮するため、--quick　オプションを使ったほうがよい
