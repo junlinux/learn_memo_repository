@@ -6,3 +6,8 @@ android入門
 ２）サービス
 ３）コンテンツプロバイダ
 ４）ブロードキャストレシーバー
+
+１．adbでインストールするときに：
+	adb install -r [apk]
+	
+2.メモリ利用状況：adb shell dumpsys meminfo

@@ -3,6 +3,10 @@
 vdreader
 kCw3pk9a#
 
+2018/11/21
+１．android側の修正を終わらせる。
+logの確認したい
+
 2018/10/01
 1.データのdownload
 2.不明なところ、聞き続ける
@@ -12,7 +16,7 @@ I'm sorry for replying to you so late.
 But when I used the FastTest library test, 
 it got a same value in P@1 and R@1 (as default),
 as shown in the picture below.
-
+
 I also tried to test the date classified as two classes, 
 but P@1 always equal to R@1.
 When I calcuated the value of P@2 and R@2,
@@ -354,15 +358,33 @@ neural network:
 ２．バージョンごとのアプリのビュー
 	やり方をまとめる：
 	簡単なこと：１．文字のサイズを小さくする
-			２．幅を調整する
+			２．幅を調整する 
 	難しいことは：１．ボダンの枠が正しくない
 			２．ページの調整方、テンプレートできないか
 			３．htmlのｔopではないところに表示し始める原因がわかった
 	解決方法：androidとlinuxを別々にする考えるですが、前の部分は全部同じにする、増加だけにする
-	
+	 -
 ３．ID連携ページ
 
 2018/11/08
 １．午前：ID連携のこと
 	１．次のボーダを真ん中にする
 	２．checkboxは選択できないこと
+	
+2018/11/12
+１．できるだけ終わらせる
+
+2018/11/13
+羽河さん、「HD29RCQ-21 に記載されているイメージ」ってどんなイメージが理解していないが、
+最新のイメージファイル「IMAGE_BR181023T」を使って、バージョンアップしました。いいでしょうか
+
+2018/11/15
+android　clientのコード：BackgroundServiceReceiver -> RecommendDownloader ->
+
+2018/11/19
+ページジャンプ問題の修正（設計からの解決方法はもっといいかも）
+androidappの修正
+
+androidの理解：
+スレッド間の通信方法を紹介する：（LooperとHandler,Thread）
+HandlerThreadとAsyncTask
