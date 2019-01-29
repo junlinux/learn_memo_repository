@@ -40,3 +40,6 @@ DUM: RAMID is [FFFFFFFF-EEEEEEEE-20180906-210158BB]
 	sudo gpasswd -a 「ユーザー名」 「グループ名」
 
 ８．ログが流れて入力が分断されるかとは思いますが、分断は無視して入力してください。
+
+9.eclipse中にリクエストしても、反応がない場合の操作：
+	1.project -> Run As -> Run on Server

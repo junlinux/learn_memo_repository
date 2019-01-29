@@ -59,6 +59,10 @@
 	イントラ：
 		二回目：sjungogo1990
 		
+	tomcat app管理：	
+		user:s139460
+		password:jun1990
+		
 6.　自分のパソコン資産を見る方法
 	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
 	詳しい資産情報の確認は以下のページに載せるエクセルを確認する。
@@ -126,3 +130,6 @@
 17.無線LANの申請：
 	会社イントーラのhomeページから”無線”を検索すると、下記のリンクが出る：
 	https://secure.sharp.co.jp/sharpbrd/1/iINDEX2.nsf/3fba653ff25f3f04492567f20009294b/6ce58a44b869da49492577af0000adfa?OpenDocument&Highlight=0,%E7%84%A1%E7%B7%9A
+	
+18.テレビを送る方法
+	
