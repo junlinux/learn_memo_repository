@@ -152,3 +152,11 @@
 	
 19.メモの記録場所（リポジトリ）：
 	//fs-m.win.sharp.co.jp/324-0029/04_稲本Gr/10_サービス企画/視聴データ事業/視聴データ加工コード管理/zhoujun/learn_memo_repository.git
+	
+20.電車が遅れる場合は処理方法： 
+	http://ws.gs.sharp-global.com/sites/GL383-1000/DocLib%E3%80%80%20%20%E9%80%9A%E9%81%94%EF%BC%8F%E9%80%A3%E7%B5%A1%E4%BA%8B%E9%A0%85/050.%E5%8B%A4%E6%80%A0/%E7%81%BD%E5%AE%B3%E7%AD%89%E3%81%AB%E3%82%88%E3%82%8A%E9%9B%BB%E8%BB%8A%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%97%E3%81%9F%E3%81%A8%E3%81%8D%E3%83%BB%E5%B0%B1%E6%A5%AD%E5%85%8D%E9%99%A4%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%A8%E3%81%8D%20%E3%81%AE%E5%8B%A4%E6%80%A0%E6%89%8B%E7%B6%9A%E3%81%8D.pdf
+
+21.androidtvの画面キャプチャー
+	C:\Users\s139460\整理\工具\adb_screenshot.batを使われる
+	１．まずadb connect [IP]
+	2.実行adb_screenshot.batスクリプト
