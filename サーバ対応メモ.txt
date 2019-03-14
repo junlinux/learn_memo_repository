@@ -1,3 +1,26 @@
 サーバ対応メモ
 １．社外向け公開サイトの説明
 http://ws.gs.sharp-global.com/sites/GL847-0001/DocLib1/web-tokatsu/index.html
+
+sudo chmod +x /home/
+
+firewall-cmd --zone=public --add-service=http --permanent
+
+１．nginx
+起動：systemctl start nginx
+error_log:/var/log/nginx/error.log
+再起動：nginx -s reload
+
+
+２．docker
+
+3.firewall-cmd
+	1).firewall-cmd --list-all
+	2).firewall-cmd --zone=public --add-service=http --permanent
+	3).firewall-cmd --reload
+	
+	
+	
+4.chromeソースを見るのはctrl + u
+
+5.eclips文字化けの解決方法は「一般->外観->色とフォント」
