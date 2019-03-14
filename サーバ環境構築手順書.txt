@@ -1,0 +1,61 @@
+linuxサーバ開発環境ローカルで構築する手順書
+１．Oracle VM VirtualBox仮想マシン
+下記のURLから最新のバージョンをダウンロードして、デフォルト設定でインストールする。特に難しいところがない。
+https://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html?ssSourceSiteId=otnjp
+
+２．CentOS
+VirtualBoxがインストールできたら、下記のURLからCentOS最新のバージョンをダウンロードして、VirtualBox上にインストールする
+http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso
+- ユーザー名とパスワードを設定する
+- デフォルトの配置では、キーボードがUSとなり、JPに変更するには、下記の手順に沿って、修正する
+	1) sudo vi /etc/vconsole.conf
+	2) KEYMAP="jp106"を追加
+	3) 保存
+	4) 再起動
+- SELinux
+	CentOSの安全制御モジュール
+- 仮想マシンから脱出
+	右側のキーCTRLを押す
+	
+３．FTP
+ローカルのフィアルをCentOSにuploadするため、FTPをインストールする
+具体的な設定は下記のURLページに参考する
+https://windabaft.co.jp/blog_ceo/?p=123
+全部設定が終わったら、一度再起動したほうが無難である
+そして、windowのコンソールのftp命令を試して見て下さい。クライアントがWinSCPの場合は転送プロトコルを「SFTP」を選択して下さい。FTPのほうができないわけである。
+
+４．docker
+下記のページの参考の上に、dockerをインストールする。ページの下に、いくつかの関連ページもあり、そこも読んで、dockerの理解を深める。
+https://knowledge.sakura.ad.jp/13795/
+dockerの基礎を学習するには、dockerのドキュメントをおすすめします
+https://docs.docker.com/get-started/
+dockerのnginxイメージもインストールできる
+
+5.nginx
+nginxのインストール方法は下記のURLに参考する
+https://nginx.org/en/linux_packages.html
+下のページを参考して、nginxの入門設定を学習する
+https://nginx.org/en/docs/beginners_guide.html
+- httpポートの開放
+	firewall-cmd --zone=public --add-service=http --premanent
+	firewall-cmd --reload
+- 試験アプリフォルダの権限修正（けっこう時間がかかった）
+	ブラウザからnginxを試すときに、「permission denied」というエラーが出る可能性があります。
+	その時、フォルダの権限を修正する必要がある。
+	chmod +x /フォルダ
+	
+- 配置ファイル
+	/etc/nginx/nginx.conf
+	/etc/nginx/conf.d/default.conf
+	
+6.apache
+phpの学習のため、apacheをインストール必要がある。インストール方法は下記のページを参考する
+https://www.rem-system.com/centos-httpd-inst/
+配置ファイル：/etc/httpd/conf/httpd.conf
+アプリディレクトリ：/var/www
+
+7.php
+yum命令を使ってインストールする
+
+8.PHP-FPM
+起動：systemctl start php-fpm
