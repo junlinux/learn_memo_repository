@@ -24,3 +24,32 @@ error_log:/var/log/nginx/error.log
 4.chromeソースを見るのはctrl + u
 
 5.eclips文字化けの解決方法は「一般->外観->色とフォント」
+
+6.php-fpmのerror-logの場所：/var/log/php-fpm/www-error.log
+
+7./var/log/nginx/access.dev.log
+
+8.linux　ユーザー：(基本的に理解できた)
+	１）管理者ユーザーと一般ユーザー、また、ログインできませんが、特定アプリの「システムアカウント」も存在する
+	２）管理者(root,スーパーユーザー、
+	３）各ユーザーは必ず一つ以上のグループに属している
+	４）ユーザーアカウントの情報は/etc/passwd　ファイルに記載している
+	５）ユーザーの作成：useraddコマンド、パフォーマンスの設定はpasswdコマンドを利用
+	６）グループにメンバーを追加コメント：usermod
+	7）ファイルやディレクトリに対して、グループのアクセス権を設定する：chmod[chmod アクセス権限　ファイル名]
+		a.ディレクトリごと権限を変更したい場合
+	8)ファイルの属性を確認するコメント：stat
+	9)ソフトリンク：ln -s /usr/local/share/man mandir
+	10)touchコメント：新しいファイルを作ること
+	１１）sudo (su do,suはswitch user)
+	
+9.https通信の証書
+	a.普通は証書とキーがある、RSAは公開鍵暗号化、SHAはハッシュ化
+	
+10.linuxディレクトリ構成：
+
+11.テスト：
+	* 性能テスト - スループット 
+	* 性能テスト - 応答時間
+	* 限界テスト
+	* 耐久テスト

@@ -67,6 +67,20 @@
 		user:s139460
 		password:sjungogo1990
 		
+	zabbix:
+		user:s139460
+		password:s139460
+	
+	redmine:
+		winドメイン
+		
+	新規サーバの初期化パスワード：
+		sharpsharp
+		
+	シャープ給与補助制度：
+		ユーザー名：139460@s.v
+		password:jun1990
+		
 6.　自分のパソコン資産を見る方法
 	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
 	詳しい資産情報の確認は以下のページに載せるエクセルを確認する。
@@ -160,3 +174,12 @@
 	C:\Users\s139460\整理\工具\adb_screenshot.batを使われる
 	１．まずadb connect [IP]
 	2.実行adb_screenshot.batスクリプト
+	
+22.隠しコメント：9877
+	コードはschatを参考する
+	
+23.ngtvサーバの開発環境ではエラーログの場所：
+	/srv/tomcat7/logs/localhost.20XX[nowtime]
+	
+24.自分のテレビのIDを確認する方法：
+	https://ngtv.aquos.jp/test/chsense/
