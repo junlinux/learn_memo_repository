@@ -46,16 +46,24 @@ https://nginx.org/en/docs/beginners_guide.html
 	
 - 配置ファイル
 	/etc/nginx/nginx.conf
-	/etc/nginx/conf.d/default.conf
+	/etc/nginx/conf.d/default.conf（アプリのディレクトリを記載）
+	
+- 再起動
+	sudo nginx -s reload
 	
 6.apache
 phpの学習のため、apacheをインストール必要がある。インストール方法は下記のページを参考する
 https://www.rem-system.com/centos-httpd-inst/
 配置ファイル：/etc/httpd/conf/httpd.conf
-アプリディレクトリ：/var/www
+アプリディレクトリ：/var/www/html
+起動：	# systemctl start httpd
+
+ログ：/var/log/httpd/error_log
 
 7.php
 yum命令を使ってインストールする
+配置ファイル：/etc/php.ini
 
 8.PHP-FPM
 起動：systemctl start php-fpm
+systemctl restart php-fpm

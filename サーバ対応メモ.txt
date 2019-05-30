@@ -48,8 +48,11 @@ error_log:/var/log/nginx/error.log
 	
 10.linuxディレクトリ構成：
 
-11.テスト：
+11.テスト：(apache jmeter)
 	* 性能テスト - スループット 
 	* 性能テスト - 応答時間
 	* 限界テスト
 	* 耐久テスト
+	
+12.apache jmeterの利用方法
+	1.test plan building

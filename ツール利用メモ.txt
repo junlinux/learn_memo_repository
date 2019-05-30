@@ -1,0 +1,10 @@
+ツール利用メモ：
+1.apache jmeter
+
+2.zabbix監視：
+	ip:http://10.214.64.198/
+	ID/PW：氏名コード（s小文字）
+	
+3.Redmine
+	url: http://10.24.71.128/redmine/my/page
+	pw: windowsのアカウント

@@ -57,7 +57,7 @@
 		password:0432998226
 		
 	イントラ：
-		二回目：sjungogo1990
+		二回目：hjungogo1990
 		
 	tomcat app管理：	
 		user:s139460
@@ -65,6 +65,10 @@
 
 	ngtv:
 		user:s139460
+		password:sjungogo1990
+		
+	notification:
+		user:S139460(大文字注意)
 		password:sjungogo1990
 		
 	zabbix:
@@ -77,7 +81,7 @@
 	新規サーバの初期化パスワード：
 		sharpsharp
 		
-	シャープ給与補助制度：
+	シャープ給与補助制度（保険）：
 		ユーザー名：139460@s.v
 		password:jun1990
 		
@@ -183,3 +187,26 @@
 	
 24.自分のテレビのIDを確認する方法：
 	https://ngtv.aquos.jp/test/chsense/
+	
+25.aquos cityのリダイレクトの方法：
+	C:\Users\s139460\整理\tool\aquos_city_リダイレクト.PNG
+	
+26.PPTのtemplete:
+	C:\Users\s139460\整理\tool\Cloud_templete_169.potx
+	
+27.chromeを用いて、全画面のキャプチャー
+	ctrl + shift + i
+	ctrl + shift + p
+	full + [enter]
+	
+28.イーサネットがない時のandroid tvキャプチャー
+	1)パソコンのキーボード（USB）をTVのUSB端子に挿す
+	2)キーボードの「print screen」キーをpress
+	3)adb shell を使って、キャプチャー画像の保存場所を確認する
+	4)adb pull 命令を使って、自分のパソコンにアップロードする
+	
+29.putty設定のエクスポート
+	１．windows コメントプロンプト：
+		reg export HKEY_CURRENT_USER\Software\SimonTatham\PuTTY putty.reg
+		保存したputty.regファイルはコメント実行するときのところに
+	２．新パソコンに、cmdでプロンプトを開く、reg import putty.regを実行
