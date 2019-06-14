@@ -65,7 +65,7 @@
 
 	ngtv:
 		user:s139460
-		password:sjungogo1990
+		password:jun1990
 		
 	notification:
 		user:S139460(大文字注意)
