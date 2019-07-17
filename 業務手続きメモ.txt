@@ -57,7 +57,7 @@
 		password:0432998226
 		
 	イントラ：
-		二回目：hjungogo1990
+		二回目：fjungogo1990
 		
 	tomcat app管理：	
 		user:s139460
@@ -84,6 +84,10 @@
 	シャープ給与補助制度（保険）：
 		ユーザー名：139460@s.v
 		password:jun1990
+	
+	cdn:
+		ユーザー:s139460
+		password:sharpsharp
 		
 6.　自分のパソコン資産を見る方法
 	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
@@ -210,3 +214,7 @@
 		reg export HKEY_CURRENT_USER\Software\SimonTatham\PuTTY putty.reg
 		保存したputty.regファイルはコメント実行するときのところに
 	２．新パソコンに、cmdでプロンプトを開く、reg import putty.regを実行
+	
+30.社外公開向け
+	１．https://secure.sharp.co.jp/secure-support/contents/introduction.html
+	２．http://ws.gs.sharp-global.com/sites/GL847-0001/DocLib1/web-tokatsu/index.html

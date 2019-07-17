@@ -116,3 +116,8 @@ WHERE TABLE_NAME = 'rankingdata';
 	mysql -h[ip] -P[port] -u[user] -p [dbname] -e "sql" > save_file
 	
 2.サーバーからデータをダウンロードするときに、メモリを考慮するため、--quick　オプションを使ったほうがよい
+
+1. プロセスリスト（処理中の接続）を表示する
+mysql> show processlist;
+不要なコネクションをkill
+mysql> kill 69;
