@@ -218,3 +218,7 @@
 30.社外公開向け
 	１．https://secure.sharp.co.jp/secure-support/contents/introduction.html
 	２．http://ws.gs.sharp-global.com/sites/GL847-0001/DocLib1/web-tokatsu/index.html
+	
+31.メールの自動的に仕分ける設定：
+	１．新規フォルダを作る
+	２．「ホーム」->「ルール」->「仕分けルールと通知の管理」
