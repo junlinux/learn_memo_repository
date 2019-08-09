@@ -189,7 +189,7 @@
 23.ngtvサーバの開発環境ではエラーログの場所：
 	/srv/tomcat7/logs/localhost.20XX[nowtime]
 	
-24.自分のテレビのIDを確認する方法：
+24.自分のテレビのIDを確認する方法：(linuxテレビ)
 	https://ngtv.aquos.jp/test/chsense/
 	
 25.aquos cityのリダイレクトの方法：
@@ -222,3 +222,20 @@
 31.メールの自動的に仕分ける設定：
 	１．新規フォルダを作る
 	２．「ホーム」->「ルール」->「仕分けルールと通知の管理」
+	
+32.androidテレビのramid確認する方法：
+	１．「設定」->「アプリ」->「AnalyticsService」をクリックする
+	２．もう一つの方法：
+		１）：「設定」->「端末情報」->「ステータス」->「シリアル番号」をゲット
+		２）：シリアル番号でしたのURLでテレビのramidを調べられる
+		https://ngtv.aquos.jp/test/cocovi/
+		
+33.サーバ情報管理サイト：
+	http://10.214.67.95:8080/FiXo/
+　　　ID：sharp-chsense@sharp.co.jp
+	passwd:sharp
+	表示方法：「ホームページ」の右側の「FiCo::Computing Service」のApplayをクッリクする
+		左側のメニューの「Instances」をクッリク、右側はサーバリストが表示してくれる
+        
+34.パソコンの初期設定
+    https://secure.sharp.co.jp/tvpro/TvsEuc/PLP0570_bbsShow.php?P_FORUM_ID=1&P_BBS_ID=2019040012&P_GROUP_ID=1

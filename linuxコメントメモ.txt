@@ -4,11 +4,6 @@ df -h (disk 容量)
 ２．screen を強制attach
 screen -d -r [name]
 
-接続台数の計算方法
-
-わかりませんが、
-なんとなく、ネットワーク防犯カメラの位置情報を売り出したら、社会問題になりますね！
-
 ３．cygwin コマンド インストール
 	１．downloadフォルダーの下に「setup-x86.exe」をクリックして、
 	ステップの中に必要な「package」を選択して、インストールします
@@ -24,7 +19,7 @@ screen -d -r [name]
 	git remote add origin ssh://[USER]@[IPAdress]/var/git/...
 	git push
 	
-６．[RAMID表示手順]
+６．bsレコーダーの[RAMID表示手順]
 ①ターミナル上でリターンキーを押すと以下のプロンプトがでます
 #
 ②以下の様に入力、リターンするとデバッグコマンドが使えるようになります
