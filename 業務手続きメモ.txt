@@ -40,6 +40,9 @@
 	接続後の場所は chs-viewdata/chs_viewrange_data/dump/201810/
 	
 5.ユーザーとパスワード
+    win:
+        user:s139460
+        passwd:Fjungogo1990
 	グゥテレ：
 		user:test027
 		password:14964649
@@ -87,7 +90,11 @@
 	
 	cdn:
 		ユーザー:s139460
-		password:sharpsharp
+		password:jun1990
+        
+    タブローサーバ：
+        ユーザー:s139460
+        passwd:jun1990
 		
 6.　自分のパソコン資産を見る方法
 	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
@@ -239,3 +246,10 @@
         
 34.パソコンの初期設定
     https://secure.sharp.co.jp/tvpro/TvsEuc/PLP0570_bbsShow.php?P_FORUM_ID=1&P_BBS_ID=2019040012&P_GROUP_ID=1
+    
+35.チャンネルセンス　機能確認ページ	
+    https://ngtv.aquos.jp/test/chsense/
+    
+36.aquos city csdサーバ管理
+    http://10.24.71.128/redmine/projects/trans-sakai_aquosjp/wiki/Androidhome%E3%82%B5%E3%83%BC%E3%83%90
+
