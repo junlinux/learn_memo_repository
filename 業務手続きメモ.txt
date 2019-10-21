@@ -40,6 +40,9 @@
 	接続後の場所は chs-viewdata/chs_viewrange_data/dump/201810/
 	
 5.ユーザーとパスワード
+    共通：
+        user:1250043299873302
+        passwd:14964649
     win:
         user:s139460
         passwd:Fjungogo1990
@@ -60,7 +63,7 @@
 		password:0432998226
 		
 	イントラ：
-		二回目：fjungogo1990
+		二回目：djungogo1990
 		
 	tomcat app管理：	
 		user:s139460
@@ -80,6 +83,9 @@
 	
 	redmine:
 		winドメイン
+        
+    SSL秘密キーのpasswd:
+        Sharp14964649
 		
 	新規サーバの初期化パスワード：
 		sharpsharp
@@ -153,7 +159,7 @@
 	　例）https://ngtv.aquos.jp/extvlink/3W/toppage
 
 12.tomcat管理サーバー（テストサーバー：ngtv）：
-	http://localhost:28081
+	http://localhost:28081(ngtv:8081)
 	ユーザー：s139460
 	パスワード:jun1990
 	パスワード修正サイト：https://ngtv2.aquos.jp/UserAdmin/toppage
@@ -250,6 +256,35 @@
 35.チャンネルセンス　機能確認ページ	
     https://ngtv.aquos.jp/test/chsense/
     
-36.aquos city csdサーバ管理
+36.aquos city csdサーバ管理wiki
     http://10.24.71.128/redmine/projects/trans-sakai_aquosjp/wiki/Androidhome%E3%82%B5%E3%83%BC%E3%83%90
+    
+37.内線電話APPの利用説明：
+    「イントラTOP画面」→「ＰＣサポート」→「内線電話アプリ(内線スマホ)サポートサイト」→「利用手続き」
+    
+38.androidhomeのSSL証明書の更新方法
+    ファイルの配置はnginxにSSLを導入に関するウェブサイトに参考
+    nginx.conf書き換えた場合は：再起動
+　　　　　　# docker restart aquosjp-cdn
+    conf.d下のファイルを修正した場合はリロードだけ
+       　# cd /srv/docker
+　　　　　　# docker-compose up -d --force aquosjp-cdn
+　　　テスト用DNS： 205.251.193.176（社外環境）
+        DNSの設定はわからない
+    中間証明書（CA）を証明書の後ろにつけたほうがいい
 
+39.タブローのメンテナンス
+    １．tsm status
+    2.tsm lincenses list
+    3.tsm restart
+    4.shutdown -r now
+    
+40.視聴／録画ランキング登録台数集計
+    https://ngtv2.aquos.jp/modelstat/
+    ID: 1250043299873302　　PW: いつもの
+    
+41.ジョブ管理システム
+    https://ngtv2.aquos.jp/rundeck/user/login
+   Grafana管理
+   　https://ngtv2.aquos.jp/grafana/login
+   両方のアカウント：ID: 1250043299873302　　PW: いつもの
