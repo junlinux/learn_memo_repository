@@ -1,0 +1,10 @@
+１．視聴ランキングの問題修正
+    現象：地方ランキングが出てこない
+    解決方法：
+    １．データベース（notification-db）にログインして、アカウントはソースコードに参考すること
+    ２．chrankingdb -> rankingdataを確認、問題がないか
+    ３．番組情報修正の方法：
+    　   sudo su cronuser
+        java -jar -Duser.timezone=JST rankingstatistics.jar -d 2019 10 15 -fix
+
+    まとめ：視聴ランキングの結果は基本的に2次加工のデータを使っているので、2次加工が問題なければ、視聴ランキングも問題がないはずである。

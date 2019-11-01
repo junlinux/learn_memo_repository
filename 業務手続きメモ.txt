@@ -102,6 +102,12 @@
         ユーザー:s139460
         passwd:jun1990
 		
+    給料：fjungogo1990
+    
+    データベースroot：
+        Sharp14964649#
+        
+    
 6.　自分のパソコン資産を見る方法
 	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
 	詳しい資産情報の確認は以下のページに載せるエクセルを確認する。
@@ -288,3 +294,9 @@
    Grafana管理
    　https://ngtv2.aquos.jp/grafana/login
    両方のアカウント：ID: 1250043299873302　　PW: いつもの
+
+42.AWSのaquosjpアカウント
+    https://aquosjp.signin.aws.amazon.com/console 
+    username:s139460
+    password:jungogo1990
+    サービス「Route 53」からDNSの設定ができた
