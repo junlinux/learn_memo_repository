@@ -107,12 +107,17 @@
     データベースroot：
         Sharp14964649#
         
+    Splunk:http://10.16.6.138:8000/ja-JP/app/search/s121226_20_20191121_01
+        user:s139460
+        paswwd:jWdA23NS
+        
     
 6.　自分のパソコン資産を見る方法
 	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
 	詳しい資産情報の確認は以下のページに載せるエクセルを確認する。
 	http://ws.gs.sharp-global.com/sites/GL067-1001/Lists/Custom%20List/guide.aspx
-
+    IT資産サイト：
+    http://ws.gs.sharp-global.com/sites/GL939-1000/default.aspx
 	
 7. サーバーの初期パスワード：
 	sharpsharp	
@@ -162,7 +167,7 @@
 	　chrankingapiモジュールのWEB-INF/xml/getMenuInfoXML.jsp
 	・記述の仕様は添付API仕様書の「7.メニューリスト取得API」を参照
 	・キャンペーンのlinkで指定するURLをngtvのextvlinkのテストページにする。
-	　例）https://ngtv.aquos.jp/extvlink/3W/toppage
+	　例）https://ngtv.aquos.jp/extvlink/3W/日dmin
 
 12.tomcat管理サーバー（テストサーバー：ngtv）：
 	http://localhost:28081(ngtv:8081)
@@ -246,7 +251,7 @@
 	１．「設定」->「アプリ」->「AnalyticsService」をクリックする
 	２．もう一つの方法：
 		１）：「設定」->「端末情報」->「ステータス」->「シリアル番号」をゲット
-		２）：シリアル番号でしたのURLでテレビのramidを調べられる
+		２）：シリアル番号でしたのURLでテレビのramidを調べられるなの
 		https://ngtv.aquos.jp/test/cocovi/
 		
 33.サーバ情報管理サイト：
@@ -269,7 +274,8 @@
     「イントラTOP画面」→「ＰＣサポート」→「内線電話アプリ(内線スマホ)サポートサイト」→「利用手続き」
     
 38.androidhomeのSSL証明書の更新方法
-    ファイルの配置はnginxにSSLを導入に関するウェブサイトに参考
+    ファイルの配置はnginxにSSLを導入に関するウェ
+    jhnrvブサイトに参考
     nginx.conf書き換えた場合は：再起動
 　　　　　　# docker restart aquosjp-cdn
     conf.d下のファイルを修正した場合はリロードだけ
@@ -300,3 +306,10 @@
     username:s139460
     password:jungogo1990
     サービス「Route 53」からDNSの設定ができた
+    
+43.データベースのコピー
+    １．元のデータベースからdumpする
+        mysqldump --single-transaction -h 192.168.201.25 -u vduser -p --no-data viewdatadb > process_viewdatadb.sql
+    ２．新データベースを作る（root権限必要かも）
+    ３．dumpしたファイルをインプット
+        mysql -h 192.168.201.66 -u vduser -p viewdatadb < process_viewdatadb.sql
