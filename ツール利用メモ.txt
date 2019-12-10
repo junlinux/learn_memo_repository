@@ -19,4 +19,34 @@
     ４）
     
 ６．docker
+    移動可能なイメージは Dockerifle と呼ばれるモノで定義します。
+    このようなリソースに接続するには、ポートを外の世界にマッピング（割り当て）する必要がありますし、どのファイルを環境に「複製」（copy in）するか指定する必要もあります。
+    docker build -t friendlyname .               # このディレクトリ内にある DockerCile でイメージ作成
+    docker run -p 4000:80 friendlyname  # "friendlyname" の実行にあたり、ポート 4000 を 80 に割り当て
+    docker run -d -p 4000:80 friendlyname                            # 同じですが、デタッチド・モード
+    docker container ls                                                  # 全ての実行中コンテナを表示
+    docker container ls -a                                       # 停止中も含めて全てのコンテナを表示
+    docker container stop <hash>                                       # 指定したコンテナを丁寧に停止
+    docker container kill <hash>                               # 指定したコンテナを強制シャットダウン
+    docker container rm <hash>                                   # マシン上から指定したコンテナを削除
+    docker container rm $(docker container ls -a -q)                           # 全てのコンテナを削除
+    docker image ls -a                                               # マシン上の全てのイメージを表示
+    docker image rm <image id>                                       # マシン上の特定のイメージを削除
+    docker image rm $(docker image ls -a -q)                         # マシン上の全てのイメージを削除
+    docker login                                       # CLI セッションで Docker の認証を行いログイン
+    docker tag <image> username/repository:tag      # レジストリにアップロードする <image> にタグ付け
+    docker push username/repository:tag                                  # タグ付けしたイメージを送信
+    docker run username/repository:tag                               # レジストリにあるイメージを実行
     
+    
+    FROM ---ベース
+    RUN --- コマンド実行する
+    ADD --- ファイルのコピー、展開（COPY コピーだけ）
+    CMD --- コンテナを実行するときのコマンド（ENTRYPOINT）
+    
+    docker build 時に -f フラグを使えば、システム上のどこに Dockerfile があるか指定できます
+    各命令は独立して実行されるのでご注意ください。新しいイメージの作成時、 RUN cd /tmp を実行したとしても、次の命令には何ら影響を与えません。
+    （説明ページ）
+    RUN 命令は既存イメージ上の新しいレイヤで、あらゆるコマンドを実行し、その結果をコミットする命令です
+    
+    EXPOSE 命令は、特定のネットワーク・ポートをコンテナが実行時にリッスンすることを Docker に伝えます。 EXPOSE があっても、これだけではホストからコンテナにアクセスできるようにしません。アクセスするには、 -p フラグを使ってポートの公開範囲を指定するか、 -P フラグで全ての露出ポートを公開する必要があります。

@@ -1,3 +1,7 @@
+linux学習メモ
+
+１．file,user,group
+
 １．diskの容量表示
 df -h (disk 容量)
 

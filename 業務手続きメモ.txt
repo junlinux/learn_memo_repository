@@ -72,6 +72,9 @@
 	ngtv:
 		user:s139460
 		password:jun1990
+        
+    relay:
+        sudo:passwd->jungogo1990
 		
 	notification:
 		user:S139460(大文字注意)
@@ -107,10 +110,13 @@
     データベースroot：
         Sharp14964649#
         
-    Splunk:http://10.16.6.138:8000/ja-JP/app/search/s121226_20_20191121_01
+    Splunk(スプランク):http://10.16.6.138:8000/ja-JP/app/search/s121226_20_20191121_01
         user:s139460
         paswwd:jWdA23NS
         
+    ストレスチェック
+        user:shps139460
+        passwd:Jungogo1990
     
 6.　自分のパソコン資産を見る方法
 	イントーラホムページで　「PCサービス」->「全社IT資産管理システム」->「PC情報（表示・修正」
@@ -313,3 +319,9 @@
     ２．新データベースを作る（root権限必要かも）
     ３．dumpしたファイルをインプット
         mysql -h 192.168.201.66 -u vduser -p viewdatadb < process_viewdatadb.sql
+        
+44.backlogの接続方法：
+    説明書でSSHで接続できたが、HTTPSでcloneができない。原因わからない、一応、ウェブサイトでHTTPSをSSHに切り替えて済む
+    
+45.突然puttyでサーバにログインできないときに
+    relayのパスワード更新する必要があるかもしれません
