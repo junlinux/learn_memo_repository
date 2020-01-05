@@ -71,7 +71,7 @@
 
 	ngtv:
 		user:s139460
-		password:jun1990
+		password:sjungogo1990
         
     relay:
         sudo:passwd->jungogo1990
@@ -325,3 +325,8 @@
     
 45.突然puttyでサーバにログインできないときに
     relayのパスワード更新する必要があるかもしれません
+    
+46.インスタンス（例：chs-ext）のネットワークの設定
+    １．Mt.Jadeのコンソールで「Attach Network Interface」で「object net」を選択すると、Swift用のネットワークが割り当てられます
+    ２．参照環境（chs-ctrl）のethを設定をコピーする
+        /etc/sysconfig/network-script/ifcfg-eth* にあります

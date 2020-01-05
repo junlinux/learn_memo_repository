@@ -1,4 +1,8 @@
 linux学習メモ
+１．サービスに関する操作
+　参加：https://blue21neo.blogspot.com/2015/08/centos7_82.html?m=1
+
+
 
 １．file,user,group
 

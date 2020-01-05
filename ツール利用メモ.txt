@@ -50,3 +50,32 @@
     RUN 命令は既存イメージ上の新しいレイヤで、あらゆるコマンドを実行し、その結果をコミットする命令です
     
     EXPOSE 命令は、特定のネットワーク・ポートをコンテナが実行時にリッスンすることを Docker に伝えます。 EXPOSE があっても、これだけではホストからコンテナにアクセスできるようにしません。アクセスするには、 -p フラグを使ってポートの公開範囲を指定するか、 -P フラグで全ての露出ポートを公開する必要があります。
+    
+    docker-compose stop
+    
+    コンテナイメージをファイルとして書き出す。
+    docker save <イメージ名> > <イメージファイル名.tar>
+    
+    $ docker run -t -i ubuntu:14.04 /bin/bash
+    
+    コンテナネットワークの設定：
+    http://docs.docker.jp/engine/tutorials/networkingcontainers.html
+    
+    コンテナでデータを管理：
+    http://docs.docker.jp/engine/tutorials/dockervolumes.html
+    
+    docker-composeからイメージを実行する方法：
+    
+    
+    docker rm コンテナ名
+    
+    起動しているコンテナに入る時にも使用したexecコマンドを用いる。
+    
+    #フォアグラウンドで実行
+　　  $ sudo docker exec コンテナ名またはコンテナID コンテナ内で実行したいコマンド
+    #バックグラウンドで実行
+　　  $ sudo docker exec -d コンテナ名またはコンテナID コンテナ内で実行したいコマンド
+
+    dockerコンテナの中に入ってshellなどを叩きたいときありますよね。
+    docker exec -i -t コンテナ名 bash
+    
